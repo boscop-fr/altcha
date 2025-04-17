@@ -67,10 +67,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:bundle && npm run build:external && npm run build:plugins",
+    "build": "npm run build:bundle && npm run build:demo",
     "build:bundle": "rimraf dist && vite build && cp src/declarations.d.ts dist/altcha.d.ts",
     "build:external": "rimraf dist_external && vite build -c vite.external.config.ts && cp src/declarations.d.ts dist_external/altcha.d.ts",
     "build:plugins": "rimraf dist_plugins && find src/plugins -type f -name '*.ts' | xargs -I {} vite build -c vite.plugins.config.ts -- {}",
+    "build:demo": "cp demo.html dist/index.html",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "format": "prettier --write ./src/**/*",

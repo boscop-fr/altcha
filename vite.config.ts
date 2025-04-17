@@ -15,7 +15,7 @@ export default defineConfig({
   build: {
     target: 'modules',
     lib: {
-      entry: 'src/entry.ts',
+      entry: 'src/main.ts',
       name: 'altcha',
       formats: ['es', 'umd'],
     },
