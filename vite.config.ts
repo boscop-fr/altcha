@@ -28,7 +28,7 @@ export default defineConfig({
   build: {
     target: 'baseline-widely-available',
     lib: {
-      entry: 'src/entry.ts',
+      entry: 'src/main.ts',
       name: 'altcha',
       formats: ['es', 'umd'],
     },
